@@ -1,2 +1,2 @@
-# malangphp-front
-Front end UI &amp; UX for MalangPHP main site
+# Malang PHP Front End UI
+Front End UI &amp; UX for MalangPHP main site
