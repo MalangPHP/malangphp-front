@@ -982,4 +982,31 @@ form {
     }
 }
 
+.pagination {
+    li {
+        a {
+            padding: 18px 24px;
+            color: @purple;
+            // border: 1px solid @purple20;
+
+            &:hover {
+                background: @purple40;
+                // border: 1px solid @purple30;
+                // color: white;
+            }
+        }
+        &.active {
+            a {
+                background: @red;
+                    border: 1px solid @red;
+
+                &:hover {
+                    background: @red10r;
+                    border: 1px solid @red;
+                }
+            }
+        }
+    }
+}
+
 
