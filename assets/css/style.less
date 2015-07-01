@@ -636,6 +636,7 @@ section.page-title {
             }
             &:hover {
                 opacity: 1.0;
+                color: white;
             }
         }
     }
@@ -663,68 +664,170 @@ section.content {
     }
     h3.subtitle {
         color: #aaa;
-        font-family: ssp-300;
+        font-family: ssp-200;
         padding: 24px 0px;
         display: block;
+        font-size: 36px;
     }
 
     // p {
     //     color: #444;
     //     font-size: 18px;
     // }
+    
+    &#post {
+        // margin-top: 200px;
+        // padding-top: 200px;
+        #mainbar {
+            padding-top: 24px;
+        }
 
-    &#post.red {
-        ul {
-            li {
-                list-style: none;
-                margin-bottom: 24px;
-                h3.title {
-                    color: @red;
-                    font-size: 36px;
-                    font-family: ssp-400;
-                }
-                .meta-pre, .meta-post {
-                    padding: 20px 0px 20px 0px;
-
-                    span, span a {
-                        color: @red;
-                        // color: #444;
-                        font-size: 18px;
-                        margin-right: 12px;
+        #sidebar {
+            h3.subtitle {
+                font-size: 36px;
+                font-family: ssp-200;
+            }
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        color: #888;
+                        font-family: ssp-400;
                     }
-                    span i {
-                        color: @red30;
-                    }
-                    span a {
-                        color: @red20r;
-                        &:hover {
-                            color: @red;
-                        }
-                    }
-                }
-                p.desc {
-                    font-size: 20px;
-                    color: #666;
-                    font-family: ssp-300;
-                }
-                .meta-post {
-                    .aright();
-                    span, span a {
-                        color: #aaa;
-
-                        &:hover {
-                            color: @red;
-                        }
-                    }
-                    span i {
-                        // color: @red;
+                    small {
                         color: #aaa;
                     }
                 }
-
             }
         }
     }
+    
+    &#post {
+        #mainbar {
+            ul {
+                li {
+                    list-style: none;
+                    margin-bottom: 24px;
+                    h3.title {
+                        font-size: 36px;
+                        font-family: ssp-400;
+                    }
+                    .meta-pre, .meta-post {
+                        padding: 20px 0px 20px 0px;
+
+                        span, span a {
+                            font-size: 18px;
+                            margin-right: 12px;
+                        }
+                    }
+                    p.desc {
+                        font-size: 20px;
+                        font-family: ssp-300;
+                    }
+                    .meta-post {
+                        .aright();
+                    }
+                }
+            }
+        }
+        
+        &.red {
+            #mainbar {
+                ul {
+                    li {
+                        h3.title {
+                            color: @red;
+                        }
+                        .meta-pre, .meta-post {
+                            span, span a {
+                                color: @red;
+                            }
+                            span i {
+                                color: @red30;
+                            }
+                            span a {
+                                color: @red20r;
+                                &:hover {
+                                    color: @red;
+                                }
+                            }
+                        }
+                        .meta-post {
+                            span, span a {
+                                color: #aaa;
+                                &:hover {
+                                    color: @red;
+                                }
+                            }
+                            span i {
+                                color: #aaa;
+                            }
+                        }
+                    }
+                }
+            }
+            #sidebar {
+                h3.subtitle {
+                    color: @red20;
+                }
+                a {
+                    &:hover{
+                        color: @red;
+                    }
+                }
+            }
+        }
+
+
+        &.purple {
+            #mainbar {
+                ul {
+                    li {
+                        h3.title {
+                            color: @purple;
+                        }
+                        .meta-pre, .meta-post {
+                            span, span a {
+                                color: @purple;
+                            }
+                            span i {
+                                color: @purple30;
+                            }
+                            span a {
+                                color: @purple20r;
+                                &:hover {
+                                    color: @purple;
+                                }
+                            }
+                        }
+                        .meta-post {
+                            span, span a {
+                                color: #aaa;
+                                &:hover {
+                                    color: @purple;
+                                }
+                            }
+                            span i {
+                                color: #aaa;
+                            }
+                        }
+                    }
+                }
+            }
+            #sidebar {
+                h3.subtitle {
+                    color: @purple20;
+                }
+                a {
+                    &:hover{
+                        color: @purple;
+                    }
+                }
+            }
+        }
+    }
+
+    
     
     &#post-detail {
         padding-top: 0px;
@@ -838,8 +941,17 @@ section.content {
             .social {
                 a {
                     margin: 0px 5px;
+                    // color: black;
+                    // background: @red;
+                    &:hover {
+                        i {
+                            // color: black;
+                            opacity: 1.0;
+                        }
+                    }
                 }
                 i {
+                    opacity: 0.5;
                     font-size: 20px;
                 }
             }
@@ -925,18 +1037,7 @@ footer {
 }
 
 #about {
-    #sidebar {
-        ul {
-            margin-bottom: 18px;
-            li {
-                list-style: none;
-                font-size: 16px;
-                color: #888;
-                a {
-                    color: @red;
-                }
-            }
-        }
+    
 
         #maps {
             iframe {
@@ -944,7 +1045,7 @@ footer {
                 height: 300px;
             }
         }
-    }
+    
 }
 
 #contact {
@@ -965,6 +1066,38 @@ footer {
     }
 }
 
+#project {
+    .list-group-item {
+        padding: 18px 18px;
+    }
+    .title {
+        font-size: 24px;
+        color: @purple;
+    }
+    .desc {
+        font-size: 16px;
+        color: #888;
+    }
+    .btn-area {
+        margin-top: 5px;
+        margin-right: 5px;
+        li {
+            list-style: none;
+            display: inline;
+            margin-left: 10px;
+            a {
+                font-size: 16px;
+                &.demo {
+                    color: @purple;
+                }
+
+                &.download {
+                    color: @red;
+                }
+            }
+        }
+    }
+}
 
 /* Additional Styles */
 
@@ -1009,4 +1142,19 @@ form {
     }
 }
 
+#sidebar {
+    ul {
+        margin-bottom: 18px;
+        li {
+            list-style: none;
+            font-size: 16px;
+            color: #888;
+            margin-bottom: 10px;
+            a {
+                font-size: 16px;
+                color: #888;
+            }
+        }
+    }
+}
 
