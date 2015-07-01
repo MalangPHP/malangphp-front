@@ -18,7 +18,7 @@
 
 <section class="content row-fluid red" id="post">
     <div class="container">
-        <div class="col-md-12">            
+        <div class="col-md-12" id="mainbar">            
             
             <ul>
                 <li>
